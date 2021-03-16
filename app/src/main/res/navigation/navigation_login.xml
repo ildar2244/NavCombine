@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_login"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.navcombine.feature_login.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_authFragment_to_restorePasswordFragment"
+            app:destination="@id/restorePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restorePasswordFragment"
+        android:name="com.example.navcombine.feature_login.RestorePasswordFragment"
+        android:label="fragment_restore_password"
+        tools:layout="@layout/fragment_restore_password">
+        <action
+            android:id="@+id/action_restorePasswordFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+
+</navigation>

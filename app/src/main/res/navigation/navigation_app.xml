@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_app">
+
+    <!-- Навигация в модуле Логин (Авторизации) -->
+    <include app:graph="@navigation/navigation_login" />
+
+    <!-- Навигация в UI где боковая шторка и нижнее меню -->
+    <include app:graph="@navigation/navigation_drawer_bottom" />
+
+</navigation>

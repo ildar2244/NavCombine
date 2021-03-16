@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_drawer_bottom"
+    app:startDestination="@id/drawerAndBottomFragment">
+
+    <!-- Здесь фрагменты вызываются из DrawerLayout (боковая шторка) -->
+    <fragment
+        android:id="@+id/drawerAndBottomFragment"
+        android:name="com.example.navcombine.other_ui.DrawerAndBottomFragment"
+        android:label="fragment_drawer_and_bottom"
+        tools:layout="@layout/fragment_drawer_and_bottom">
+        <action
+            android:id="@+id/action_drawerAndBottomFragment_to_side1Fragment"
+            app:destination="@id/side1Fragment" />
+        <action
+            android:id="@+id/action_drawerAndBottomFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_drawerAndBottomFragment_to_sideListFragment"
+            app:destination="@id/sideListFragment" />
+        <action
+            android:id="@+id/action_drawerAndBottomFragment_to_bottomHomeFragment"
+            app:destination="@id/bottomHomeFragment" />
+        <action
+            android:id="@+id/action_drawerAndBottomFragment_to_bottom2Fragment"
+            app:destination="@id/bottom2Fragment" />
+        <action
+            android:id="@+id/action_drawerAndBottomFragment_to_bottom3Fragment"
+            app:destination="@id/bottom3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/side1Fragment"
+        android:name="com.example.navcombine.other_ui.Side1Fragment"
+        android:label="fragment_side1"
+        tools:layout="@layout/fragment_side1" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.navcombine.feature_settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.navcombine.feature_settings.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification">
+        <action
+            android:id="@+id/action_notificationFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sideListFragment"
+        android:name="com.example.navcombine.feature_list.SideListFragment"
+        android:label="fragment_side_list"
+        tools:layout="@layout/fragment_side_list">
+        <action
+            android:id="@+id/action_sideListFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.navcombine.feature_list.ItemListFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list">
+        <action
+            android:id="@+id/action_itemListFragment_to_sideListFragment"
+            app:destination="@id/sideListFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_bottomHomeFragment"
+            app:destination="@id/bottomHomeFragment" />
+    </fragment>
+
+    <!-- Здесь фрагменты вызываются из BottomNavView -->
+    <fragment
+        android:id="@+id/bottomHomeFragment"
+        android:name="com.example.navcombine.feature_home.BottomHomeFragment"
+        android:label="fragment_bottom_home"
+        tools:layout="@layout/fragment_bottom_home">
+        <action
+            android:id="@+id/action_bottomHomeFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottom3Fragment"
+        android:name="com.example.navcombine.other_ui.Bottom3Fragment"
+        android:label="fragment_bottom3"
+        tools:layout="@layout/fragment_bottom3" />
+    <fragment
+        android:id="@+id/bottom2Fragment"
+        android:name="com.example.navcombine.other_ui.Bottom2Fragment"
+        android:label="fragment_bottom2"
+        tools:layout="@layout/fragment_bottom2" />
+
+</navigation>
